@@ -1,5 +1,5 @@
 # Project: Getting and cleaning data
----
+***
 * Overview
   + Project summary
   + General data description
