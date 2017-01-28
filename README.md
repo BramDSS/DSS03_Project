@@ -20,9 +20,8 @@ A full description is available at the site where the data was obtained (link as
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 Detailed information about the files provided can be found in the "README.txt", as copied below:
 
-
-***
 >
+***
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
