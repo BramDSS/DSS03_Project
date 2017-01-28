@@ -120,9 +120,11 @@ The process of creating the first tidy data set can be outlined as follows:
 During the process, the following assumptions have been made:
 * The dplyr package is installed. Although the package is loaded in the script, it is not installed. If the package has not been installed (previously), it should be installed prior to running the script by command "install.packages(dplyr)".
 * Data is downloaded to and created in the a subdirectory ("Data") of the current working directory.
+* Requirement # 2 is assumed to include only the mean() and std() measurements as mentioned in "features_info.txt". Hence, the measurements on meanFreq have not been included in the final data set. The same goes for additional vectors used on the angle() variable (the last six columns).
 
 
 ## Additional remarks
 ***
-The final result file is written to the as a text file ("ResultTbale.txt") in the subdirectory "Data" of the working directory. It can be loaded into R with the following command:
-test <- read.table(file = "./Data/ResultTable.txt", header = TRUE)
+* The final result file is written to the as a text file ("ResultTbale.txt") in the subdirectory "Data" of the working directory. It can be loaded into R with the following command:
+            test <- read.table(file = "./Data/ResultTable.txt", header = TRUE)
+
