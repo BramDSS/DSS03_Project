@@ -2,9 +2,11 @@
 ***
 * Overview
   + Project summary
-  + General data descripion
-* Process creating the first data set
-* Process creating the second data set
+  + General data description
+  + Project requirements
+* Process steps
+  + Outline of the steps
+  + Assumptions made during the process
 * Additional remarks
 
 
@@ -19,7 +21,6 @@ Galaxy S smartphone.
 A full description is available at the site where the data was obtained (link as provided by the project assignment):
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 Detailed information about the files provided can be found in the "README.txt", as copied below:
-
 
 ***
 >==================================================================
@@ -74,18 +75,50 @@ Detailed information about the files provided can be found in the "README.txt", 
 >Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
 ***
+Further information about the files, especially the features provided in the X_train.txt and X_test.txt can be found in the "features_info.txt".
 
-## Process creating the first data set
+### Project requirements
+The requiremetns for the project are (quote from the project assignment):
+
+>You should create one R script called run_analysis.R that does the following.
+>1. Merges the training and the test sets to create one data set.
+>2. Extracts only the measurements on the mean and standard deviation for each measurement.
+>3. Uses descriptive activity names to name the activities in the data set
+>4. Appropriately labels the data set with descriptive variable names.
+>5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity >and each subject.
+
+A script meeting all the requirements mentioned above is provided in this github repository.
+
+## The process
 ***
+### Outline of the steps
 The process of creating the first tidy data set can be outlined as follows:
 1. Download file
 2. Unzip file
 3. Read activity data and features file
-4. Clean the column names (as provided in features file): meeting requirement # 
+4. Clean the column names (as provided in features file): meeting requirement # 4
+5. Select the required column names (needed for requirement # 2)
+6. Reading test group data
+  + X_test and select appropriate columns (requirement # 2)
+  + subject_test
+  + y_test
+  + combine test data to 1 test set
+7. Reading training group data
+  + X_train and select appropriate columns (requirement # 2)
+  + subject_train
+  + y_train
+  + combine training data to 1 training set
+8. Merge training and test sets (requirement # 1)
+9. Add proper activity labels instead of activity id's (requirement # 3)
+10. Remove unnecessary variables from workspace
+11. Load dplyr package (necessary for next step)
+12. Create group means for the variables (requirement # 5)
+13. Improve names of calculated averages
+14. Write the table to file.
 
-
-## Process creating the second data set
-***
+###  Assumptions made during the process
+During the process, the following assumptions have been made:
+* The dplyr package is installed. Although the package is loaded in the script, it is not installed. If the package has not been installed (previously), it should be installed prior to running the script by command "install.packages(dplyr)".
 
 
 ## Additional remarks
