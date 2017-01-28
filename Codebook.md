@@ -35,6 +35,7 @@ The following block is quoted from the "features_info.txt", as provided with the
 >
 >mean(): Mean value
 >std(): Standard deviation
+
 ---
 
 ## Description per variable
